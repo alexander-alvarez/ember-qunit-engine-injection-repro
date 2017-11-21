@@ -6,7 +6,17 @@ import config from './config/environment';
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    myEngine: {
+      dependencies: {
+        services: [
+          'my-service',
+          'store'
+        ]
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);
