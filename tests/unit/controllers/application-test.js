@@ -6,7 +6,8 @@ const resolver = engineResolverFor('my-engine');
 
 
 moduleFor('controller:application', 'Unit | Controller | application', {
-  resolver
+  resolver,
+  service: ['service:my-service']
 });
 
 // Replace this with your real tests.
